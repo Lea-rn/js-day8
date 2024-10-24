@@ -142,16 +142,16 @@
 // // }
 
 
-const Michaelinfo = {   //// key/property : value
+// const Michaelinfo = {   //// key/property : value
     
- firstName : "Michael" ,
- lastName : "Jackson",
- age : 25 ,
- job : "singer" , 
- hobbies : ["singing" , "dancing" , "acting"] , 
- freinds : ["peter" , "max" , "steven" , "barkley"]
+//  firstName : "Michael" ,
+//  lastName : "Jackson",
+//  age : 25 ,
+//  job : "singer" , 
+//  hobbies : ["singing" , "dancing" , "acting"] , 
+//  freinds : ["peter" , "max" , "steven" , "barkley"]
 
-}
+// }
 
 // console.log(Michaelinfo.firstName)
 // console.log(Michaelinfo["lastName"])
@@ -164,7 +164,57 @@ const Michaelinfo = {   //// key/property : value
 // //// -Michael- has -3- hobbies  and  has -4- freinds and his best freind is called -barkley- .... 
 
 
+// const Michaelinfo = {   //// key/property : value
+    
+//     firstName : "Michael" ,
+//     lastName : "Jackson",
+//     age : 25 ,
+//     job : "singer" , 
+//     hobbies : ["singing" , "dancing" , "acting"] , 
+//     freinds : ["peter" , "max" , "steven" , "barkley"]
+   
+//    }
 
+
+////////// this 
+   const Michaelinfo = {   //// key/property : value
+    
+    firstName : "Michael" ,
+    lastName : "Jackson",
+    bearthYear : 2000 ,
+    calcAge : function(){
+     return 2024 - this.bearthYear
+    },
+    job : "singer" , 
+    hobbies : ["singing" , "dancing" , "acting"] , 
+    freinds : ["peter" , "max" , "steven" , "barkley"]
+   
+   }
+
+   const peterinfo = {   //// key/property : value
+    
+    firstName : "peter" ,
+    lastName : "Jackson",
+    bearthYear : 1990 ,
+    calcAge : function(){
+        return 2024 - this.bearthYear
+       },
+    job : "singer" , 
+    hobbies : ["singing" , "dancing" , "acting"] , 
+    freinds : ["peter" , "max" , "steven" , "barkley"] , 
+    hasDriversLicense : false , 
+    getSummary : function (){
+        /// -peter- is a -34- years old -singer- and he has a/no driver licence
+        console.log(`${this.firstName} is a ${this.calcAge()} years old ${this.job} and he has ${this.hasDriversLicense ? "a" : "no"} driver licence `)
+    }
+   
+   }
+
+
+   console.log("michael:" , Michaelinfo.calcAge() , "peter" , peterinfo.calcAge())
+
+
+console.log(peterinfo.getSummary())
 
 
 
